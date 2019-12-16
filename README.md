@@ -37,23 +37,25 @@ Install with `const s_hhmm = require('simple-hhmm');`
 
 ## Examples
 ```
-var test = st.createTime("12:35");
-var test2 = st.createTime("01:15");
-var test3 = st.createTime("21:45");
-var test4 = st.createTime("12:24");
-var test5 = st.createTime("12:37");
-var test6 = st.createTime("12:24");
-console.log("Times:\nt1: " + st.strTime(test) + "\nt2: " + st.strTime(test2) + "\nt3: " + st.strTime(test3) + "\nt4: " + st.strTime(test4) + "\nt5: " + st.strTime(test5));
-console.log(st.strTime(test) + " plus " + st.strTime(test2) + " is " + st.strTime(st.addTime(test, test2)) + " -> overwrite false");
-console.log(st.strTime(test5) + " plus " + st.strTime(test3) + " is " + st.strTime(st.addTime(test5, test3, true)) + " -> overwrite true");
-console.log(st.strTime(test) + " minus " + st.strTime(test2) + " is " + st.strTime(st.subTime(test, test2)) + " -> overwrite false");
-console.log(st.strTime(test2) + " minus " + st.strTime(test) + " is " + st.strTime(st.subTime(test2, test, true)) + " -> overwrite true");
-console.log("Time between " + st.strTime(test) + " and " + st.strTime(test2) + " is " + st.strTime(st.difTime(test, test2)));
-console.log("Time between " + st.strTime(test) + " and " + st.strTime(test3) + " is " + st.strTime(st.difTime(test, test3)));
-console.log("Time between " + st.strTime(test3) + " and " + st.strTime(test2) + " is " + st.strTime(st.difTime(test3, test2)));
-console.log("Time between " + st.strTime(test) + " and " + st.strTime(test4) + " is " + st.strTime(st.difTime(test, test4)));
-console.log("Time between " + st.strTime(test) + " and " + st.strTime(test5) + " is " + st.strTime(st.difTime(test, test5)));
-console.log("Time between " + st.strTime(test6) + " and " + st.strTime(test4) + " is " + st.strTime(st.difTime(test6, test4)));
+const s_hhmm = require('simple-hhmm');
+
+var test = s_hhmm.createTime("12:35");
+var test2 = s_hhmm.createTime("01:15");
+var test3 = s_hhmm.createTime("21:45");
+var test4 = s_hhmm.createTime("12:24");
+var test5 = s_hhmm.createTime("12:37");
+var test6 = s_hhmm.createTime("12:24");
+console.log("Times:\nt1: " + s_hhmm.strTime(test) + "\nt2: " + s_hhmm.strTime(test2) + "\nt3: " + s_hhmm.strTime(test3) + "\nt4: " + s_hhmm.strTime(test4) + "\nt5: " + s_hhmm.strTime(test5));
+console.log(s_hhmm.strTime(test) + " plus " + s_hhmm.strTime(test2) + " is " + s_hhmm.strTime(s_hhmm.addTime(test, test2)) + " -> overwrite false");
+console.log(s_hhmm.strTime(test5) + " plus " + s_hhmm.strTime(test3) + " is " + s_hhmm.strTime(s_hhmm.addTime(test5, test3, true)) + " -> overwrite true");
+console.log(s_hhmm.strTime(test) + " minus " + s_hhmm.strTime(test2) + " is " + s_hhmm.strTime(s_hhmm.subTime(test, test2)) + " -> overwrite false");
+console.log(s_hhmm.strTime(test2) + " minus " + s_hhmm.strTime(test) + " is " + s_hhmm.strTime(s_hhmm.subTime(test2, test, true)) + " -> overwrite true");
+console.log("Time between " + s_hhmm.strTime(test) + " and " + s_hhmm.strTime(test2) + " is " + s_hhmm.strTime(s_hhmm.difTime(test, test2)));
+console.log("Time between " + s_hhmm.strTime(test) + " and " + s_hhmm.strTime(test3) + " is " + s_hhmm.strTime(s_hhmm.difTime(test, test3)));
+console.log("Time between " + s_hhmm.strTime(test3) + " and " + s_hhmm.strTime(test2) + " is " + s_hhmm.strTime(s_hhmm.difTime(test3, test2)));
+console.log("Time between " + s_hhmm.strTime(test) + " and " + s_hhmm.strTime(test4) + " is " + s_hhmm.strTime(s_hhmm.difTime(test, test4)));
+console.log("Time between " + s_hhmm.strTime(test) + " and " + s_hhmm.strTime(test5) + " is " + s_hhmm.strTime(s_hhmm.difTime(test, test5)));
+console.log("Time between " + s_hhmm.strTime(test6) + " and " + s_hhmm.strTime(test4) + " is " + s_hhmm.strTime(s_hhmm.difTime(test6, test4)));
 ```
 
 ### Output

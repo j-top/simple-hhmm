@@ -1,6 +1,6 @@
 {
   "name": "simple-hhmm",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "A simple module for basic HH:mm format time calculations",
   "main": "index.js",
   "repository": {
