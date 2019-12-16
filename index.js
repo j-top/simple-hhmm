@@ -18,7 +18,7 @@ module.exports.isSimpleTime = function(input){
     return false;
 }
 
-module.exports.function.strTime = function(t1){
+module.exports.strTime = function(t1){
     if(isSimpleTime(t1)){
         return "" + (t1.hours < 10 ? "0" + t1.hours : t1.hours) + ":" + (t1.minutes < 10 ? "0" + t1.minutes : t1.minutes);
     }
