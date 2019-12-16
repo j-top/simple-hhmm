@@ -1,7 +1,8 @@
 # simple-hhmm
 A simple module for basic HH:mm format time calculations
 
-Install with `require('simple-hhmm');`
+Install with `npm i simple-hhmm`
+Include with `require('simple-hhmm');`
 
 
 ## Functions
