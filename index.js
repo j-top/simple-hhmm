@@ -13,7 +13,7 @@ module.exports.createTime = function createTime(input="00:00"){
 
 const simpleTimeError = new Error("Invalid Type: Parameters must match simpleTime format: \nObject {\n  hours: Number,\n  minutes: Number\n}");
 
-module.exports.isSimpleTime = function isSimpleTime(input){
+function isSimpleTime(input){
     if(input.hours && input.minutes && !isNaN(input.hours) || input.hours === 0 && !isNaN(input.minutes)) return true;
     return false;
 }

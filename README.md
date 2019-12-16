@@ -9,11 +9,6 @@ A simple module for basic HH:mm format time calculations
 - Parameter is purposefully specific and must be a string in the format "HH:mm" where HH is 0-23 and mm is 0-59
 - Returns newly created object
 
-`isSimpleTime(input)`
-- Checks if input format matches that of a simpleTime object
-- Parameter is anything that needs to be checked
-- Returns true if input object matches { hours: Number, minutes: Number } format
-
 `strTime(t1)`
 - Formats simpleTime object as a string
 - Parameter is a simpleTime formatted object
