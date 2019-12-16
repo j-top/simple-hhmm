@@ -1,6 +1,7 @@
 # simple-hhmm
 A simple module for basic HH:mm format time calculations
-Install with `const s_hhmm = require('simple-hhmm');`
+
+Install with `require('simple-hhmm');`
 
 
 ## Functions
