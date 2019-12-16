@@ -1,4 +1,4 @@
-module.exports.function.createTime = function(input="00:00"){
+module.exports.createTime = function(input="00:00"){
     if(typeof input !== typeof "easter egg") throw new Error("Invalid Type: Must be of type 'string'.").stack;
     if(input.length !== 5) throw new Error("Invalid Length: Must be of length 5.").stack;
     var split = input.split(':');
@@ -13,7 +13,7 @@ module.exports.function.createTime = function(input="00:00"){
 
 const simpleTimeError = new Error("Invalid Type: Parameters must match simpleTime format: \nObject {\n  hours: Number,\n  minutes: Number\n}");
 
-module.exports.function.isSimpleTime = function(input){
+module.exports.isSimpleTime = function(input){
     if(input.hours && input.minutes && !isNaN(input.hours) || input.hours === 0 && !isNaN(input.minutes)) return true;
     return false;
 }
@@ -25,7 +25,7 @@ module.exports.function.strTime = function(t1){
     else throw simpleTimeError.stack;
 }
 
-module.exports.function.addTime = function(t1, t2, overwrite=false){
+module.exports.addTime = function(t1, t2, overwrite=false){
     if(isSimpleTime(t1) && isSimpleTime(t2)){
         const temp = { hours: t1.hours, minutes: t1.minutes };
         temp.minutes += t2.minutes;
@@ -45,7 +45,7 @@ module.exports.function.addTime = function(t1, t2, overwrite=false){
     else throw simpleTimeError.stack;
 }
 
-module.exports.function.subTime = function(t1,t2, overwrite=false){
+module.exports.subTime = function(t1,t2, overwrite=false){
     if(isSimpleTime(t1) && isSimpleTime(t2)){
         const temp = { hours: t1.hours, minutes: t1.minutes };
         temp.minutes -= t2.minutes;
@@ -65,7 +65,7 @@ module.exports.function.subTime = function(t1,t2, overwrite=false){
     else throw simpleTimeError.stack;
 }
 
-module.exports.function.difTime = function(t1,t2){
+module.exports.difTime = function(t1,t2){
     if(isSimpleTime(t1) && isSimpleTime(t2)){
         const difTime = { hours: 0, minutes: 0 };
         var lessOneHour = 0;
