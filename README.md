@@ -6,7 +6,7 @@ A simple module for basic HH:mm format time calculations
 
 `createTime(input="00:00")`
 - Creates a new simpleTime formatted object in the format { hours: Number, minutes: Number }
-- Parameter is purposefully specific and must be a string in the format "HH:mm" where HH is 0-23 and mm is 0-59
+- Parameter is purposefully specific and must be a string in the format "HH:mm" where HH is 0-23 and mm is 0-59 - MUST INCLUDE LEADING 0'S ex: 4:07 -> `createTime("04:07);`
 - Returns newly created object
 
 `strTime(t1)`
