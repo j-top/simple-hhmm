@@ -29,7 +29,7 @@ module.exports.addTime = function addTime(t1, t2, overwrite=false){
     if(isSimpleTime(t1) && isSimpleTime(t2)){
         const temp = { hours: t1.hours, minutes: t1.minutes };
         temp.minutes += t2.minutes;
-        if(temp.minutes > 60){
+        if(temp.minutes >= 60){
             temp.hours++;
             temp.minutes -= 60;
         }
