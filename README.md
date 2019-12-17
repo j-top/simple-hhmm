@@ -27,7 +27,7 @@ Include with `require('simple-hhmm');`
 - Returns the result of the two times being added together as a simpleTime format object
 
 `subTime(t1,t2,overwrite=false)`
-- Subtracts one time from another and returns the result. t1 is overwritten is the 3rd parameter is true
+- Subtracts one time from another and returns the result. t1 is overwritten if the 3rd parameter is true
 - Edge cases are handled similarly to addTime
 - Parameters are 2 simpleTime format objects, overwrite is a boolean and not required
 - Returns the result of the times being subtracted as a simpleTime format object
