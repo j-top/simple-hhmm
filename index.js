@@ -35,7 +35,7 @@ module.exports.tryCreateTime = function tryCreateTime(input){
         }
         var testTime = createTime(input.slice(0,5));
         if(isSimpleTime(testTime)){
-            if(testTime.hours < 12) testTime.hours += add12;
+            if(testTime.hours < 12 && testTime.hours !== 0) testTime.hours += add12;
             return testTime;
         }
         else return -1;
