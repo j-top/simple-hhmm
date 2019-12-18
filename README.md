@@ -49,11 +49,11 @@ Include with `require('simple-hhmm');`
 const s_hhmm = require('simple-hhmm');
 
 var test = s_hhmm.createTime("12:35");
-var test2 = s_hhmm.createTime("01:15");
+var test2 = s_hhmm.tryCreateTime("01:15 AM");
 var test3 = s_hhmm.createTime("21:45");
 var test4 = s_hhmm.createTime("12:24");
 var test5 = s_hhmm.createTime("12:37");
-var test6 = s_hhmm.createTime("12:24");
+var test6 = s_hhmm.tryCreateTime("12:24 pm");
 console.log("Times:\nt1: " + s_hhmm.strTime(test) + "\nt2: " + s_hhmm.strTime(test2) + "\nt3: " + s_hhmm.strTime(test3) + "\nt4: " + s_hhmm.strTime(test4) + "\nt5: " + s_hhmm.strTime(test5));
 console.log(s_hhmm.strTime(test) + " plus " + s_hhmm.strTime(test2) + " is " + s_hhmm.strTime(s_hhmm.addTime(test, test2)) + " -> overwrite false");
 console.log(s_hhmm.strTime(test5) + " plus " + s_hhmm.strTime(test3) + " is " + s_hhmm.strTime(s_hhmm.addTime(test5, test3, true)) + " -> overwrite true");
