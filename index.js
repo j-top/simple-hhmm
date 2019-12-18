@@ -1,4 +1,5 @@
-module.exports.createTime = function createTime(input="00:00"){
+module.exports.createTime = createTime;
+function createTime(input="00:00"){
     if(typeof input !== typeof "easter egg") throw new Error("Invalid Type: Must be of type 'string'.").stack;
     if(input.length !== 5) throw new Error("Invalid Length: Must be of length 5.").stack;
     var split = input.split(':');
@@ -32,14 +33,14 @@ module.exports.tryCreateTime = function tryCreateTime(input){
         if(input.includes("pm") || input.includes("PM") || input.includes("Pm")){
             add12 = 12;
         }
-        var testTime = s_hhmm.createTime(input.slice(0,5));
+        var testTime = createTime(input.slice(0,5));
         if(isSimpleTime(testTime)){
-            testTime.hours += add12;
+            if(testTime.hours < 12) testTime.hours += add12;
             return testTime;
         }
         else return -1;
     }
-    catch (simpleTimeError){
+    catch {
         return -1;
     }
 }
