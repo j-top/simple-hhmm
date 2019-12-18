@@ -15,6 +15,12 @@ Include with `require('simple-hhmm');`
 - MUST INCLUDE LEADING ZERO -> ex: 4:07 -> `createTime("04:07");`
 - Returns newly created object
 
+`tryCreateTime(input)`
+- Attempts to create a new simpleTime format object with a time string that has additional information appended on the end
+- Example Times: "10:15 am", "02:12 next", "09:45pm" (if the string includes pm in it, 12 hours will be added)
+- Parameter is a string that starts with 5 characters in "HH:mm" format
+- Returns a new simpleTime object if possible, or -1 if unsuccessful
+
 `strTime(t1)`
 - Formats simpleTime object as a string
 - Parameter is a simpleTime formatted object

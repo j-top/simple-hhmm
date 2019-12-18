@@ -25,6 +25,25 @@ module.exports.strTime = function strTime(t1){
     else throw simpleTimeError.stack;
 }
 
+module.exports.tryCreateTime = function tryCreateTime(input){
+    if(typeof input !== typeof "easter egg") throw new Error("Invalid Type: Must be of type 'string'.").stack;
+    try{
+        var add12 = 0;
+        if(input.includes("pm") || input.includes("PM") || input.includes("Pm")){
+            add12 = 12;
+        }
+        var testTime = s_hhmm.createTime(input.slice(0,5));
+        if(isSimpleTime(testTime)){
+            testTime.hours += add12;
+            return testTime;
+        }
+        else return -1;
+    }
+    catch (simpleTimeError){
+        return -1;
+    }
+}
+
 module.exports.addTime = function addTime(t1, t2, overwrite=false){
     if(isSimpleTime(t1) && isSimpleTime(t2)){
         const temp = { hours: t1.hours, minutes: t1.minutes };
