@@ -17,7 +17,7 @@ Include with `require('simple-hhmm');`
 
 `tryCreateTime(input)`
 - Attempts to create a new simpleTime format object with a time string that has additional information appended on the end
-- Example Times: "10:15 am", "02:12 next", "09:45pm" (if the string includes pm in it, 12 hours will be added)
+- Example Times: "10:15 am", "02:12 next", "09:45pm" (if the string includes pm in it, 12 hours will be added for hours < 12)
 - Parameter is a string that starts with 5 characters in "HH:mm" format
 - Returns a new simpleTime object if possible, or -1 if unsuccessful
 
